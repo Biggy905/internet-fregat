@@ -39,6 +39,23 @@ make migrate-up
 ```
 docker compose run --rm if-php-cli php ./applications/spark migrate --all --no-header
 ```
+5. Изменение прав у директории "writable"
+```
+modify-dir
+```
+или
+```
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/cache/
+```
+```
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/logs/
+```
+```
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/session/
+```
+```
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/uploads/
+```
 
 #### Проект доступен по адресу:
 ```

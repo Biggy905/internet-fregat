@@ -31,4 +31,8 @@ composer-install:
 	docker compose run --rm if-php-cli composer install
 migrate-up:
 	docker compose run --rm if-php-cli php ./applications/spark migrate --all --no-header
-
+modify-dir:
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/cache/
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/logs/
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/session/
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/uploads/
