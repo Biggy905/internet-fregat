@@ -116,10 +116,8 @@ final class ScheduleValidateController extends BaseController
 
     public function delete(int $id): string
     {
-        $requestData = json_decode($this->request->getBody(), true) ?? [];
-
         $form = new DeleteScheduleValidateForm(
-            $requestData['id'] ?? null,
+            $id ?? null,
         );
 
         $validator = $this->validatorService->setValidate($form);
