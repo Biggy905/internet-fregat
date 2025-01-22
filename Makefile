@@ -36,3 +36,4 @@ modify-dir:
 	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/logs/
 	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/session/
 	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/writable/uploads/
+	docker compose run --rm if-php-cli chmod 777 -R /app/src/applications/public/uploads/

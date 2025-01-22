@@ -48,10 +48,10 @@ final readonly class ExcelService
 
         $excel = new Xlsx($spreadsheet);
 
-        $path = __DIR__ . '/../../public/excel.xlsx';
+        $path = __DIR__ . '/../../public/uploads/excel.xlsx';
         $excel->save($path);
 
-        return 'excel.xlsx';
+        return 'uploads/excel.xlsx';
     }
 
     private function letters(): array
