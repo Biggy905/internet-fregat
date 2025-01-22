@@ -1,0 +1,36 @@
+{
+  "name": "biggy905/internet-fregat",
+  "description": "ТЗ для компании Интернет-Фрегат",
+  "keywords": ["internet-fregat"],
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.2",
+    "codeigniter4/framework": "~4.5.5",
+    "vlucas/phpdotenv": "*",
+    "yiisoft/validator": "^2.1.0",
+    "phpoffice/phpspreadsheet": "^3.8.0"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Applications\\": "applications/app",
+      "Config\\": "applications/app/Config",
+      "Tests\\": "applications/tests"
+    },
+    "exclude-from-classmap": [
+      "applications/Database/migrations/**"
+    ]
+  }
+}
